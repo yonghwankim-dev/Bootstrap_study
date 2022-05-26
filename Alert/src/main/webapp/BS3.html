@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+	function closeAlert(){
+		$('#test_alert').alert("close");
+	}
+
+	$(function(){
+	$('#test_alert').on("close.bs.alert", function(){
+		alert("Alert 창이 닫히기 직전 이벤트 수행");
+	});
+	$('#test_alert').on("closed.bs.alert", function(){
+		alert("Alert 창이 닫힌 후 이벤트 발생");
+	});
+});
+	
+</script>
+	
+<title>Bootstrap 3</title>
+</head>
+<body>
+	<div class="container">
+		<h3>alert 적용 이전</h3>
+		<div>
+			<strong>Success</strong> Alert입니다.
+		</div>
+		<h3>alert 클래스</h3>
+		<div class="alert">
+			<strong>alert</strong> Alert입니다.
+		</div>
+		
+		<h3>alert-success 클래스</h3>
+		<div class="alert alert-success">
+			<strong>alert-success</strong> Alert입니다.
+		</div>
+
+		<h3>alert-info 클래스</h3>
+		<div class="alert alert-info">
+			<strong>alert-info</strong> Alert입니다.
+		</div>
+
+		<h3>alert-warning 클래스</h3>
+		<div class="alert alert-warning">
+			<strong>alert-warning</strong> Alert입니다.
+		</div>
+		<hr>
+
+		<h3>alert-link 클래스</h3>
+		<div class="alert alert-success">
+			<strong>alert-link</strong> Alert입니다. 
+			<a href="http://google.com" class="alert-link">Google</a>
+		</div>
+		<hr>
+
+		<h3>alert-dismissible 클래스</h3>
+		<div class="alert alert-info alert-dismissible fade in">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<strong>alert-dismissible</strong> Alert입니다.
+		</div>
+
+		<h3>alert-script</h3>
+		<div class="alert alert-info alert-dismissible fade in" id="test_alert">
+			<strong>alert-info</strong> Alert입니다.
+		</div>
+		<button type="button" onclick="closeAlert()">Alert 닫기</button>
+	</div>
+</body>
+</html>
