@@ -6,6 +6,11 @@
 4. [\[Bootstrap\] 색상 클래스](https://yonghwankim-dev.tistory.com/389)
 5. [\[Bootstrap\]테이블(Table)](https://yonghwankim-dev.tistory.com/390)
 6. [\[Bootstrap\] 이미지(Image)](https://yonghwankim-dev.tistory.com/391)
+7. [\[Bootstrap\] 점보트론(jumbotron)](https://yonghwankim-dev.tistory.com/392)
+8. [\[Bootstrap\] Alert](https://yonghwankim-dev.tistory.com/393)
+9. [\[Bootstrap\] Button](https://yonghwankim-dev.tistory.com/394)
+
+
 
 
 
