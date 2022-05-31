@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+<title>Bootstrap 4</title>
+</head>
+<body>
+	<!--
+		그룹 : form-group, form-check
+		입력 : form-control, form-check-input, form-control-range, form-control-file
+		배치 : form-check-inline
+		크기 : form-control-sm, form-control[-default], form-control-lg
+		외곽선 : form-control-plaintext
+		레이블 : form-check-label
+	-->
+	<div class="container" style="margin-top: 50px;">
+		<div class="row">
+			<div class="col-sm-2">
+
+			</div>
+			<div class="col-sm-8">
+				<div class="card shadow">
+					<div class="card-body">
+						<form action="#" method="post">
+							<!-- text, form-control -->
+							<div class="form-group row">
+								<label for="a1" class="col-sm-4 text-sm-right">text</label>
+								<div class="col-sm-8">
+									<input type="text" id="a1" class="form-control">
+								</div>
+							</div>
+							<hr>
+
+							<!-- password, form-control -->
+							<div class="form-group row">
+								<label for="a2" class="col-sm-4 text-sm-right">password</label>
+								<div class="col-sm-8">
+									<input type="password" id="a2" class="form-control">
+								</div>
+							</div>
+							<hr>
+
+							<!-- textarea, form-control -->
+							<div class="form-group row">
+								<label for="a3" class="col-sm-4 text-sm-right">text area</label>
+								<div class="col-sm-8">
+									<textarea id="a3" cols="30" rows="5" class="form-control" style="resize: none;">
+
+									</textarea>
+								</div>
+							</div>
+							<hr>
+
+							<!-- checkbox, form-check-input -->
+							<div class="form-group row">
+								<label class="col-sm-4 text-sm-right">check box</label>
+								<div class="col-sm-8">
+									<div class="form-check"> <!-- form-check 적용, form-check 영역이 체크박스 한개를 의미함 -->
+										<label class="form-check-label">
+											<!-- form-check-input 적용 -->
+											<input type="checkbox" class="form-check-input" name="c1" value="1"> 체크박스 1
+										</label>
+									</div>
+									<div class="form-check">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="c1" value="2"> 체크박스 2
+										</label>
+									</div>
+									<div class="form-check">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="c1" value="3"> 체크박스 3
+										</label>
+									</div>
+								</div>
+							</div>
+							<hr>
+
+							<!-- inline checkbox : 가로 방향으로 체크박스들 배치 -->
+							<div class="form-group row">
+								<label class="col-sm-4 text-sm-right">check box inline</label>
+								<div class="col-sm-8">
+									<div class="form-check form-check-inline"> <!-- form-check-inline 적용 -->
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="c2" value="1"> 체크박스 1
+										</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="c2" value="2"> 체크박스 2
+										</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="c2" value="3"> 체크박스 3
+										</label>
+									</div>
+								</div>
+							</div>
+							<hr>
+
+							<!-- radio -->
+							<div class="form-group row">
+								<label class="col-sm-4 text-sm-right">radio</label>
+								<div class="col-sm-8">
+									<div class="form-check">
+										<label class="form-check-label">
+											<input type="radio" class="form-check-input" name="r1" value="1" checked> 라디오 1
+										</label>
+									</div>
+									<div class="form-check">
+										<label class="form-check-label">
+											<input type="radio" class="form-check-input" name="r1" value="2"> 라디오 2
+										</label>
+									</div>
+									<div class="form-check">
+										<label class="form-check-label">
+											<input type="radio" class="form-check-input" name="r1" value="3"> 라디오 3
+										</label>
+									</div>
+								</div>
+							</div>
+							<hr>
+
+							<!-- radio inline -->
+							<div class="form-group row">
+								<label class="col-sm-4 text-sm-right">radio</label>
+								<div class="col-sm-8">
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="radio" class="form-check-input" name="r2" value="1" checked> 라디오 1
+										</label>
+									</div>
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="radio" class="form-check-input" name="r2" value="2"> 라디오 2
+										</label>
+									</div>
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="radio" class="form-check-input" name="r2" value="3"> 라디오 3
+										</label>
+									</div>
+								</div>
+							</div>
+							<hr>
+							
+							<!-- select, form-control -->
+							<div class="form-group row">
+								<label for="a4" class="col-sm-4 text-sm-right">select</label>
+								<div class="col-sm-8">
+									<select id="a4" class="form-control">
+										<option value="1">항목1</option>
+										<option value="2">항목2</option>
+										<option value="3">항목3</option>
+										<option value="3">항목4</option>
+										<option value="3">항목5</option>
+									</select>
+								</div>
+							</div>
+							<hr>
+
+							<!-- select multiple -->
+							<div class="form-group row">
+								<label for="a5" class="col-sm-4 text-sm-right">select multiple</label>
+								<div class="col-sm-8">
+									<select id="a5" class="form-control" multiple>
+										<option value="1">항목1</option>
+										<option value="2">항목2</option>
+										<option value="3">항목3</option>
+										<option value="3">항목4</option>
+										<option value="3">항목5</option>
+									</select>
+								</div>
+							</div>
+							<hr>
+
+							<!-- form-control-sm -->
+							<div class="form-group row">
+								<label for="a6" class="col-sm-4 text-sm-right">size small</label>
+								<div class="col-sm-8">
+									<input type="text" id="a6" class="form-control form-control-sm">
+								</div>
+							</div>
+							<!-- form-control-default -->
+							<div class="form-group row">
+								<label for="a6" class="col-sm-4 text-sm-right">size default</label>
+								<div class="col-sm-8">
+									<input type="text" id="a6" class="form-control">
+								</div>
+							</div>
+							<!-- form-control-lg -->
+							<div class="form-group row">
+								<label for="a6" class="col-sm-4 text-sm-right">size large</label>
+								<div class="col-sm-8">
+									<input type="text" id="a6" class="form-control form-control-lg">
+								</div>
+							</div>
+							<hr>
+
+							<!-- border default -->
+							<div class="form-group row">
+								<label for="a6" class="col-sm-4 text-sm-right">border default</label>
+								<div class="col-sm-8">
+									<input type="text" id="a6" class="form-control">
+								</div>
+							</div>
+
+							<!-- border plain -->
+							<div class="form-group row">
+								<label for="a7" class="col-sm-4 text-sm-right">border default</label>
+								<div class="col-sm-8">
+									<input type="text" id="a7" class="form-control-plaintext">	<!-- form-control-plaintext : 외곽선이 없음, 입력시 보임 -->
+								</div>
+							</div>
+							<hr>
+
+							<!-- range, form-control-range -->
+							<div class="form-group row">
+								<label for="a8" class="col-sm-4 text-sm-right">range</label>
+								<div class="col-sm-8">
+									<input type="range" id="a8" class="form-control-range">
+								</div>
+							</div>
+							<hr>
+							<!-- file, form-control-file -->
+							<div class="form-group row">
+								<label for="a9" class="col-sm-4 text-sm-right">range</label>
+								<div class="col-sm-8">
+									<input type="file" id="a9" class="form-control-file border">	<!-- form-contorl-file : 파일 형식 배치-->
+								</div>
+							</div>
+							<hr>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
