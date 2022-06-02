@@ -28,6 +28,14 @@
 26. [\[Bootstrap 4\] Modal](https://yonghwankim-dev.tistory.com/411)
 27. [\[Bootstrap 4\] ToolTip](https://yonghwankim-dev.tistory.com/412)
 28. [\[Bootstrap 4\] PopOver](https://yonghwankim-dev.tistory.com/413)
+29. [\[Bootstrap 4\] 공통 클래스 1 (border, rounded, float)](https://yonghwankim-dev.tistory.com/414)
+30. [\[Bootstrap 4\] 공통 클래스 2 (길이, 여백, 그림자, Block)](https://yonghwankim-dev.tistory.com/415)
+31. [\[Bootstrap 4\] 반응형 웹 대응하기](https://yonghwankim-dev.tistory.com/416)
+32. [\[Bootstrap 4\] Flex](https://yonghwankim-dev.tistory.com/417)
+
+
+
+
 
 
 
