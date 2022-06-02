@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+<title>Bootstrap 4</title>
+</head>
+<body>
+	<!--
+		flex
+		- flex-row
+		- flex-row-reverse
+		- flex-column
+		- flex-column-reverse
+		- justify-content-*
+					- jusitfy-content-start
+					- jusitfy-content-end
+					- jusitfy-content-center
+					- jusitfy-content-between
+					- jusitfy-content-around
+		- flex-fill
+		- order-숫자
+		- flex-wrap
+		- flex-wrap-reverse
+		- flex-nowrap
+	-->
+	<div class="container" style="margin-top: 50px;">
+		<h3>d-flex</h3>
+		<div class="bg-secondary p-3 text-white d-flex"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+		<hr>
+
+		<h3>d-inline-flex</h3>
+		<div class="bg-secondary p-3 text-white d-inline-flex"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+		<hr>
+
+		<!-- flex-row : 가로방향 원래 순서
+			 flex-row-reverse : 가로방향 반대 순서
+		-->
+		<h3>flex-row-reverse</h3>
+		<div class="bg-secondary p-3 text-white d-flex flex-row-reverse"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+		<hr>
+
+		<!-- flex-column : 세로방향 원래 순서 
+			flex-column-reverse : 세로 방향 반대 순서
+		-->
+		<h3>flex-col-reverse</h3>
+		<div class="bg-secondary p-3 text-white d-flex flex-column-reverse"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+		<hr>
+
+		<!--
+			justify-content-*
+			- jusitfy-content-start
+			- jusitfy-content-end
+			- jusitfy-content-center
+			- jusitfy-content-between
+			- jusitfy-content-around
+		-->
+		<h3>justify-content-start</h3>
+		<div class="bg-secondary p-3 text-white d-flex justify-content-start"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+		<h3>justify-content-end</h3>
+		<div class="bg-secondary p-3 text-white d-flex justify-content-end"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+		<h3>justify-content-center</h3>
+		<div class="bg-secondary p-3 text-white d-flex justify-content-center"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+		<h3>justify-content-between</h3>
+		<div class="bg-secondary p-3 text-white d-flex justify-content-between"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+		<h3>justify-content-around</h3>
+		<div class="bg-secondary p-3 text-white d-flex justify-content-around"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+		<hr>
+
+		<!--
+			flex-fill : 영역의 남은 공간을 누가 차지할 것인지 설정
+						flex-fill 클래스를 설정하면 해당 요소가 차지함
+		-->
+		<h3>flex-fill</h3>
+		<p>div 영역의 남은 공간을 누가 차지할 것인지 설정, Flex Item1이 다 차지함</p>
+		<div class="bg-secondary p-3 text-white d-flex"> 
+			<div class="bg-primary p-2 flex-fill">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+		<p>Flex Item 1, 2가 다 차지함</p>
+		<div class="bg-secondary p-3 text-white d-flex"> 
+			<div class="bg-primary p-2 flex-fill">Flex Item 1</div>
+			<div class="bg-info p-2 flex-fill">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+		<p>Flex Item 1,2,3이 균등하게 차지함</p>
+		<div class="bg-secondary p-3 text-white d-flex"> 
+			<div class="bg-primary p-2 flex-fill">Flex Item 1</div>
+			<div class="bg-info p-2 flex-fill">Flex Item 2</div>
+			<div class="bg-success p-2 flex-fill">Flex Item 3</div>
+		</div>
+		<hr>
+		
+		<!-- order-[숫자] : 요소들의 배치 순서를 설정
+		-->
+		<h3>order</h3>
+		<div class="bg-secondary p-3 text-white d-flex"> 
+			<div class="bg-primary p-2 order-3">Flex Item 1</div>
+			<div class="bg-info p-2 order-1">Flex Item 2</div>
+			<div class="bg-success p-2 order-2">Flex Item 3</div>
+		</div>
+		<hr>
+
+		<!--
+			wrap/nowrap : 영역 안의 내부 요소들이 너무 많아서 영역을 벗어나는
+			경우가 존재함. 이럴때 개행여부를 어떻게 해야 하는지 설정하는게
+			wrap입니다.
+			flex-wrap : 개행함
+			flex-wrap-reverse : 개행을 반대로 함
+			flex-nowrap : 개행하지 않음
+		-->
+		<h3>flex-nowrap or 설정하지 않음</h3>
+		<div class="bg-secondary p-3 text-white d-flex flex-nowrap"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+			<div class="bg-primary p-2">Flex Item 4</div>
+			<div class="bg-info p-2">Flex Item 5</div>
+			<div class="bg-success p-2">Flex Item 6</div>
+			<div class="bg-primary p-2">Flex Item 7</div>
+			<div class="bg-info p-2">Flex Item 8</div>
+			<div class="bg-success p-2">Flex Item 9</div>
+			<div class="bg-primary p-2">Flex Item 10</div>
+			<div class="bg-info p-2">Flex Item 11</div>
+			<div class="bg-success p-2">Flex Item 12</div>
+			<div class="bg-primary p-2">Flex Item 13</div>
+			<div class="bg-info p-2">Flex Item 14</div>
+			<div class="bg-success p-2">Flex Item 15</div>
+			<div class="bg-primary p-2">Flex Item 16</div>
+			<div class="bg-info p-2">Flex Item 17</div>
+			<div class="bg-success p-2">Flex Item 18</div>
+		</div>
+		<h3>flex-wrap</h3>
+		<div class="bg-secondary p-3 text-white d-flex flex-wrap"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+			<div class="bg-primary p-2">Flex Item 4</div>
+			<div class="bg-info p-2">Flex Item 5</div>
+			<div class="bg-success p-2">Flex Item 6</div>
+			<div class="bg-primary p-2">Flex Item 7</div>
+			<div class="bg-info p-2">Flex Item 8</div>
+			<div class="bg-success p-2">Flex Item 9</div>
+			<div class="bg-primary p-2">Flex Item 10</div>
+			<div class="bg-info p-2">Flex Item 11</div>
+			<div class="bg-success p-2">Flex Item 12</div>
+			<div class="bg-primary p-2">Flex Item 13</div>
+			<div class="bg-info p-2">Flex Item 14</div>
+			<div class="bg-success p-2">Flex Item 15</div>
+			<div class="bg-primary p-2">Flex Item 16</div>
+			<div class="bg-info p-2">Flex Item 17</div>
+			<div class="bg-success p-2">Flex Item 18</div>
+		</div>
+		<h3>flex-wrap-reverse</h3>
+		<p>개행은 하되 아래로 내리지 않고 위로 개행합니다.</p>
+		<div class="bg-secondary p-3 text-white d-flex flex-wrap-reverse"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+			<div class="bg-primary p-2">Flex Item 4</div>
+			<div class="bg-info p-2">Flex Item 5</div>
+			<div class="bg-success p-2">Flex Item 6</div>
+			<div class="bg-primary p-2">Flex Item 7</div>
+			<div class="bg-info p-2">Flex Item 8</div>
+			<div class="bg-success p-2">Flex Item 9</div>
+			<div class="bg-primary p-2">Flex Item 10</div>
+			<div class="bg-info p-2">Flex Item 11</div>
+			<div class="bg-success p-2">Flex Item 12</div>
+			<div class="bg-primary p-2">Flex Item 13</div>
+			<div class="bg-info p-2">Flex Item 14</div>
+			<div class="bg-success p-2">Flex Item 15</div>
+			<div class="bg-primary p-2">Flex Item 16</div>
+			<div class="bg-info p-2">Flex Item 17</div>
+			<div class="bg-success p-2">Flex Item 18</div>
+		</div>
+		<hr>
+
+		<!--
+			align-content-* : flex 내부 요소들이 한줄일 경우 상하정렬 기준을 설정
+				- align-content-start
+				- align-content-end
+				- align-content-center
+				- align-content-around
+				- align-content-stretch (default)
+		-->
+		<h3>align-content-start</h3>
+		<p>위쪽 부분으로 정렬</p>
+		<div class="bg-secondary p-3 text-white d-flex flex-wrap align-content-start" style="height: 300px;"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+			<div class="bg-primary p-2">Flex Item 4</div>
+			<div class="bg-info p-2">Flex Item 5</div>
+			<div class="bg-success p-2">Flex Item 6</div>
+			<div class="bg-primary p-2">Flex Item 7</div>
+			<div class="bg-info p-2">Flex Item 8</div>
+			<div class="bg-success p-2">Flex Item 9</div>
+			<div class="bg-primary p-2">Flex Item 10</div>
+			<div class="bg-info p-2">Flex Item 11</div>
+			<div class="bg-success p-2">Flex Item 12</div>
+			<div class="bg-primary p-2">Flex Item 13</div>
+			<div class="bg-info p-2">Flex Item 14</div>
+			<div class="bg-success p-2">Flex Item 15</div>
+			<div class="bg-primary p-2">Flex Item 16</div>
+			<div class="bg-info p-2">Flex Item 17</div>
+			<div class="bg-success p-2">Flex Item 18</div>
+		</div>
+		<h3>align-content-end</h3>
+		<p>아래쪽 부분으로 정렬</p>
+		<div class="bg-secondary p-3 text-white d-flex flex-wrap align-content-end" style="height: 300px;"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+			<div class="bg-primary p-2">Flex Item 4</div>
+			<div class="bg-info p-2">Flex Item 5</div>
+			<div class="bg-success p-2">Flex Item 6</div>
+			<div class="bg-primary p-2">Flex Item 7</div>
+			<div class="bg-info p-2">Flex Item 8</div>
+			<div class="bg-success p-2">Flex Item 9</div>
+			<div class="bg-primary p-2">Flex Item 10</div>
+			<div class="bg-info p-2">Flex Item 11</div>
+			<div class="bg-success p-2">Flex Item 12</div>
+			<div class="bg-primary p-2">Flex Item 13</div>
+			<div class="bg-info p-2">Flex Item 14</div>
+			<div class="bg-success p-2">Flex Item 15</div>
+			<div class="bg-primary p-2">Flex Item 16</div>
+			<div class="bg-info p-2">Flex Item 17</div>
+			<div class="bg-success p-2">Flex Item 18</div>
+		</div>
+		<h3>align-content-center</h3>
+		<p>중앙 부분으로 정렬</p>
+		<div class="bg-secondary p-3 text-white d-flex flex-wrap align-content-center" style="height: 300px;"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+			<div class="bg-primary p-2">Flex Item 4</div>
+			<div class="bg-info p-2">Flex Item 5</div>
+			<div class="bg-success p-2">Flex Item 6</div>
+			<div class="bg-primary p-2">Flex Item 7</div>
+			<div class="bg-info p-2">Flex Item 8</div>
+			<div class="bg-success p-2">Flex Item 9</div>
+			<div class="bg-primary p-2">Flex Item 10</div>
+			<div class="bg-info p-2">Flex Item 11</div>
+			<div class="bg-success p-2">Flex Item 12</div>
+			<div class="bg-primary p-2">Flex Item 13</div>
+			<div class="bg-info p-2">Flex Item 14</div>
+			<div class="bg-success p-2">Flex Item 15</div>
+			<div class="bg-primary p-2">Flex Item 16</div>
+			<div class="bg-info p-2">Flex Item 17</div>
+			<div class="bg-success p-2">Flex Item 18</div>
+		</div>
+		<h3>align-content-around</h3>
+		<p>균등하게 정렬</p>
+		<div class="bg-secondary p-3 text-white d-flex flex-wrap align-content-around" style="height: 300px;"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+			<div class="bg-primary p-2">Flex Item 4</div>
+			<div class="bg-info p-2">Flex Item 5</div>
+			<div class="bg-success p-2">Flex Item 6</div>
+			<div class="bg-primary p-2">Flex Item 7</div>
+			<div class="bg-info p-2">Flex Item 8</div>
+			<div class="bg-success p-2">Flex Item 9</div>
+			<div class="bg-primary p-2">Flex Item 10</div>
+			<div class="bg-info p-2">Flex Item 11</div>
+			<div class="bg-success p-2">Flex Item 12</div>
+			<div class="bg-primary p-2">Flex Item 13</div>
+			<div class="bg-info p-2">Flex Item 14</div>
+			<div class="bg-success p-2">Flex Item 15</div>
+			<div class="bg-primary p-2">Flex Item 16</div>
+			<div class="bg-info p-2">Flex Item 17</div>
+			<div class="bg-success p-2">Flex Item 18</div>
+		</div>
+		<h3>align-content-stretch</h3>
+		<p>영역을 전부 차지하도록 정렬 (default)</p>
+		<div class="bg-secondary p-3 text-white d-flex flex-wrap align-content-stretch" style="height: 300px;"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+			<div class="bg-primary p-2">Flex Item 4</div>
+			<div class="bg-info p-2">Flex Item 5</div>
+			<div class="bg-success p-2">Flex Item 6</div>
+			<div class="bg-primary p-2">Flex Item 7</div>
+			<div class="bg-info p-2">Flex Item 8</div>
+			<div class="bg-success p-2">Flex Item 9</div>
+			<div class="bg-primary p-2">Flex Item 10</div>
+			<div class="bg-info p-2">Flex Item 11</div>
+			<div class="bg-success p-2">Flex Item 12</div>
+			<div class="bg-primary p-2">Flex Item 13</div>
+			<div class="bg-info p-2">Flex Item 14</div>
+			<div class="bg-success p-2">Flex Item 15</div>
+			<div class="bg-primary p-2">Flex Item 16</div>
+			<div class="bg-info p-2">Flex Item 17</div>
+			<div class="bg-success p-2">Flex Item 18</div>
+		</div>
+		<hr>
+
+		<!--
+			align-items-*
+				- align-items-start
+				- align-items-end
+				- align-items-center
+				- align-items-baseline
+				- align-items-stretch (default)
+		-->
+		<h3>align-items-start</h3>
+		<p>flex 내부 요소들이 한줄일 경우 위쪽으로 정렬</p>
+		<div class="bg-secondary p-3 text-white d-flex align-items-start" style="height: 300px;"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+
+		<h3>align-items-end</h3>
+		<p>flex 내부 요소들이 한줄일 경우 아래쪽으로 정렬</p>
+		<div class="bg-secondary p-3 text-white d-flex align-items-end" style="height: 300px;"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+
+		<h3>align-items-center</h3>
+		<p>flex 내부 요소들이 한줄일 경우 중앙으로 정렬</p>
+		<div class="bg-secondary p-3 text-white d-flex align-items-center" style="height: 300px;"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+
+		<h3>align-items-baseline</h3>
+		<p>flex 내부 요소들이 한줄일 경우 flex 컨테이너의 기준선(baseline)에 정렬</p>
+		<div class="bg-secondary p-3 text-white d-flex align-items-baseline" style="height: 300px;"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+
+		<h3>align-items-stretch (default)</h3>
+		<p>flex 내부 요소들이 한줄일 경우 영역을 차지하도록 정렬</p>
+		<div class="bg-secondary p-3 text-white d-flex align-items-stretch" style="height: 300px;"> 
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+		<hr>
+
+		<!--
+			align-self-* : flex 내부 요소들 중 하나의 상하 정렬 기준을 설정
+				- align-self-start
+				- align-self-end
+				- align-self-center
+				- align-self-baseline
+				- align-self-stretch (default)
+		-->
+		<h3>align-self-start</h3>
+		<div class="bg-secondary p-3 text-white d-flex" style="height: 300px;">  
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2 align-self-start">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+		
+		<h3>align-self-end</h3>
+		<div class="bg-secondary p-3 text-white d-flex" style="height: 300px;">  
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2 align-self-end">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+
+		<h3>align-self-center</h3>
+		<div class="bg-secondary p-3 text-white d-flex" style="height: 300px;">  
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2 align-self-center">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+
+		<h3>align-self-baseline</h3>
+		<div class="bg-secondary p-3 text-white d-flex" style="height: 300px;">  
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2 align-self-baseline">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+
+		<h3>align-self-stretch (default)</h3>
+		<div class="bg-secondary p-3 text-white d-flex" style="height: 300px;">  
+			<div class="bg-primary p-2">Flex Item 1</div>
+			<div class="bg-info p-2 align-self-stretch">Flex Item 2</div>
+			<div class="bg-success p-2">Flex Item 3</div>
+		</div>
+	</div>
+</body>
+</html>
